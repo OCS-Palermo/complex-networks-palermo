@@ -1,12 +1,11 @@
 <p align="center">
   <img src="source/images/cnpa_logo.png" width=300/>
+  <h1 align="center">Complex Networks Palermo</h1>
 </p>
 
-# Complex Networks Palermo
+This repository is the official database for the [Complex Networks (21958)](https://www.unipa.it/persone/docenti/m/salvatore.micciche/?pagina=insegnamento&idInsegnamento=155641&idCattedra=149802) course by [Salvatore Miccichè](https://www.unipa.it/persone/docenti/m/salvatore.micciche/) in [Università degli Studi di Palermo](https://www.unipa.it/).
 
-This repository is the official database for all code for the [Complex Networks (21958)](https://www.unipa.it/persone/docenti/m/salvatore.micciche/?pagina=insegnamento&idInsegnamento=155641&idCattedra=149802) course by [Salvatore Miccichè](https://www.unipa.it/persone/docenti/m/salvatore.micciche/) in [Università degli Studi di Palermo](https://www.unipa.it/).
-
-You can see all the code [here on github]() or using [nbviewer](https://nbviewer.org/) by following this link:
+You can see all the code [here on github]() or using [nbviewer](https://nbviewer.org/) by following this link: \
 https://nbviewer.org/github/CNPalermo/complex-networks-palermo/tree/main/
 
 ## Getting Started
@@ -32,7 +31,7 @@ Also many good resources were used for this repository:
 
 ## Contributing
 
-Please, feel free to add your own contributions! If you make an exercise or some cool Complex Network code, you are **encouraged** to add it here.
+Please, if you make an exercise or some cool Complex Network code, you are **encouraged** to add it here. Also, feel free to open discussions on the Issue page and issuing your pull requests!
 
 Please make sure your code is well documented following a format similar to the notebooks present in this repository. In order to add your files just follow these steps:
 
@@ -44,7 +43,10 @@ Please make sure your code is well documented following a format similar to the 
 
 ## Roadmap
 
-
+- [ ] Add conda guide and how to install python
+- [ ] Jupyter guide
+- [ ] Git guide
+- [ ] Add first notebooks
 
 
 
