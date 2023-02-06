@@ -5,8 +5,8 @@
 
 This repository is the official database for the [Complex Networks (21958)](https://www.unipa.it/persone/docenti/m/salvatore.micciche/?pagina=insegnamento&idInsegnamento=155641&idCattedra=149802) course by [Salvatore Miccichè](https://www.unipa.it/persone/docenti/m/salvatore.micciche/) in [Università degli Studi di Palermo](https://www.unipa.it/).
 
-You can see all the code [here on github]() or using [nbviewer](https://nbviewer.org/) by following this link: \
-https://nbviewer.org/github/CNPalermo/complex-networks-palermo/tree/main/
+You can see all the code [here on github](source/) or using nbviewer by following this link: \
+https://nbviewer.org/github/CNPalermo/complex-networks-palermo/tree/main/source
 
 ## Getting Started
 
