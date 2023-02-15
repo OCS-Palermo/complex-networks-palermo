@@ -1,12 +1,15 @@
 <p align="center">
-  <img src="source/images/cnpa_logo.png" width=300/>
+  <img src="images/cnpa_logo.png" width=300/>
   <h1 align="center">Complex Networks Palermo</h1>
 </p>
 
 This repository is the official database for the [Complex Networks (21958)](https://www.unipa.it/persone/docenti/m/salvatore.micciche/?pagina=insegnamento&idInsegnamento=155641&idCattedra=149802) course by [Salvatore Miccichè](https://www.unipa.it/persone/docenti/m/salvatore.micciche/) in [Università degli Studi di Palermo](https://www.unipa.it/).
 
-You can see all the code [here on github](source/) or using nbviewer by following this link: \
-https://nbviewer.org/github/CNPalermo/complex-networks-palermo/tree/main/source
+You can see all the base code [here in the source folder](source/) or using NBViewer by following this link: \
+[**Main Notebook Folder**](https://nbviewer.org/github/CNPalermo/complex-networks-palermo/tree/main/source)
+
+Exercises and various snippets of codes are uploaded in the contributions section, check it out [here in the GitHub folder](source/) or in NBViewer:
+[**Contribution Folder**](https://nbviewer.org/github/CNPalermo/complex-networks-palermo/tree/main/contributions)
 
 ## Getting Started
 
@@ -19,6 +22,7 @@ If you only want to run the notebooks you just need these packages (versions are
 - python-igraph **≥ 0.10**
 - matplotlib **≥ 3.6**
 - pycairo **≥ 1.23** _(for igraph plot)_
+- geopandas **≥ 0.12** _(for grographic plots)_
 
 ## Acknowledgments
 
