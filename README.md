@@ -8,7 +8,7 @@ This repository is the official database for the [Complex Networks (21958)](http
 You can see all the base code [here in the source folder](source/) or using NBViewer by following this link: \
 [**Main Notebook Folder**](https://nbviewer.org/github/CNPalermo/complex-networks-palermo/tree/main/source)
 
-Exercises and various snippets of codes are uploaded in the contributions section, check it out [here in the GitHub folder](source/) or in NBViewer:
+Exercises and various snippets of codes are uploaded in the contributions section, check it out [here in the GitHub folder](source/) or in NBViewer: \
 [**Contribution Folder**](https://nbviewer.org/github/CNPalermo/complex-networks-palermo/tree/main/contributions)
 
 ## Getting Started
