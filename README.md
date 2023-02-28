@@ -26,8 +26,7 @@ If you only want to run the notebooks you just need these packages (versions are
 
 ## Acknowledgments
 
-This repository was made by [Alessandro Romancino](https://github.com/alex180500) with contribution by:
-- Mattia Romeo
+This repository was made by [**Alessandro Romancino**](https://github.com/alex180500) with major contribution by [**Alessandro Ferrara**](https://github.com/Pherrara). Thanks also to **Mattia Romeo** for the various code he gave to me.
 
 Also many good resources were used for this repository:
 - M. Newman, [**Networks**](https://doi.org/10.1093/oso/9780198805090.001.0001) _Oxford University Press (2018)_
