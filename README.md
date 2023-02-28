@@ -47,10 +47,12 @@ Please make sure your code is well documented following a format similar to the 
 
 ## Roadmap
 
+- [x] Add tutorials for data import and the CN logo
+- [ ] igraph cheatsheet
+- [ ] Add various model constructores
 - [ ] Add conda guide and how to install python
 - [ ] Jupyter guide
 - [ ] Git guide
-- [ ] Add first notebooks
 
 
 
