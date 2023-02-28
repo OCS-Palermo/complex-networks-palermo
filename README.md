@@ -20,9 +20,8 @@ Tutorial for python and jupyter in general are coming...
 If you only want to run the notebooks you just need these packages (versions are the only one tested):
 - numpy **≥ 1.24**
 - python-igraph **≥ 0.10**
-- matplotlib **≥ 3.6**
-- pycairo **≥ 1.23** _(for igraph plot)_
-- geopandas **≥ 0.12** _(for grographic plots)_
+- matplotlib **≥ 3.6** _(for general plotting)_
+- pycairo **≥ 1.23** _(for all the igraph plots)_
 
 ## Acknowledgments
 
