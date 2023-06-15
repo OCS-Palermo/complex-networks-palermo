@@ -1,0 +1,657 @@
+
+
+<!DOCTYPE html>
+
+
+<html >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Airport Data Converter &#8212; CN Palermo</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'contributions/tutorials/airport_data';</script>
+    <link rel="shortcut icon" href="../../_static/cnpa_logo.png"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Complex Network Logo" href="airport_logo.html" />
+    <link rel="prev" title="Test Notebook" href="../../source/test_notebook.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="None"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../../README.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/cnpa_banner.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../../_static/cnpa_banner.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../README.html">
+                    Complex Networks Palermo
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Complex Networks</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../source/test_notebook.html">Test Notebook</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Tutorials</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Airport Data Converter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="airport_logo.html">Complex Network Logo</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Contributions</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../ferrara/ferrara.html">Ferrara Contributions</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../ferrara/esame_ferrara/esame_CN_Ferrara_22_02_2023_original_document.html">Esame Ferrara, 22/02/2023</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ferrara/esame_ferrara/esame_CN_Ferrara_22_02_2023-better_edge_switcher.html">Esame Ferrara, better edge-switcher</a></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/contributions/tutorials/airport_data.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Airport Data Converter</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#first-imports">First Imports</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#segment-filtering">Segment Filtering</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#json-coordinate-dictionary">JSON coordinate dictionary</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-edge-list">The edge list</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="airport-data-converter">
+<h1>Airport Data Converter<a class="headerlink" href="#airport-data-converter" title="Permalink to this headline">#</a></h1>
+<p><strong>Code by Alessandro Romancino</strong></p>
+<p>This notebook was made just to show <strong>how I imported all the data from the airports file</strong> given by prof. Micciché and how I made the files which are present in the <code class="docutils literal notranslate"><span class="pre">/data/</span></code> folder.</p>
+<p>I think this is useful because there are few good resources online on how to efficiently import big files like the one given (~238 MB) and how to manipulate the data.</p>
+<p>The data was split into three files:</p>
+<ul class="simple">
+<li><p>a <a class="reference external" href="https://www.json.org/json-en.html">JSON file</a> containing the data relative to the coordinates of the airports (basically a <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#typesmapping">Python dictionary</a>)</p></li>
+<li><p>An <a class="reference external" href="https://github.com/TheOpteProject/LGL/">LGL formatted file</a> containing the edge list with the weights and another one with the unweighted network</p></li>
+</ul>
+<p>In order to reproduce this notebook you just need to place the <code class="docutils literal notranslate"><span class="pre">20170901_m1.so6</span></code> file in the same folder as this notebook, then you can play with it. <em>The file was too large for GitHub so I uploaded it on my Google Drive with this link:</em></p>
+<p><a class="reference external" href="https://drive.google.com/file/d/1WZNhskGxDEcETyJq3BZui5dGCPhhvyes/view?usp=share_link">https://drive.google.com/file/d/1WZNhskGxDEcETyJq3BZui5dGCPhhvyes/view?usp=share_link</a></p>
+<section id="first-imports">
+<h2>First Imports<a class="headerlink" href="#first-imports" title="Permalink to this headline">#</a></h2>
+<p>For this notebook you will only need igraph, numpy and the preinstalled <a class="reference external" href="https://docs.python.org/3/library/json.html">json module</a>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">igraph</span> <span class="k">as</span> <span class="nn">ig</span>
+<span class="kn">import</span> <span class="nn">json</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>For our purposes we can import all the data in a numpy <strong>ndarray</strong> using the <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.loadtxt.html"><code class="docutils literal notranslate"><span class="pre">numpy.loadtxt</span></code></a> method.</p>
+<p>We only need the columns indicating:</p>
+<ul class="simple">
+<li><p><strong>1.</strong> Name of departing airport in the <a class="reference external" href="https://en.wikipedia.org/wiki/ICAO_airport_code">ICAO format</a></p></li>
+<li><p><strong>2.</strong> Name of arriving airport</p></li>
+<li><p><strong>12.</strong> Latitude of the departing point in the segment</p></li>
+<li><p><strong>13.</strong> Longitude of the departing point in the  segment</p></li>
+<li><p><strong>14.</strong> Latitude of the arriving point in the  segment</p></li>
+<li><p><strong>15.</strong> Longitude of the arriving point in the  segment</p></li>
+<li><p><strong>17.</strong> Segment number</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span>
+    <span class="s2">&quot;20170901_m1.so6&quot;</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s2">&quot; &quot;</span><span class="p">,</span> <span class="n">usecols</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">17</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">str</span>
+<span class="p">)</span>
+<span class="n">data</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[&#39;ZZZZ&#39;, &#39;ZZZZ&#39;, &#39;3382.000000&#39;, ..., &#39;3393.000000&#39;, &#39;194.000000&#39;,
+        &#39;1&#39;],
+       [&#39;ZZZZ&#39;, &#39;ENUG&#39;, &#39;4279.000000&#39;, ..., &#39;4278.666667&#39;, &#39;1335.050000&#39;,
+        &#39;1&#39;],
+       [&#39;EPPW&#39;, &#39;EPPW&#39;, &#39;3142.750000&#39;, ..., &#39;3142.750000&#39;, &#39;1071.133333&#39;,
+        &#39;1&#39;],
+       ...,
+       [&#39;LICJ&#39;, &#39;LIRF&#39;, &#39;2524.650000&#39;, ..., &#39;2519.266667&#39;, &#39;727.300000&#39;,
+        &#39;36&#39;],
+       [&#39;LICJ&#39;, &#39;LIRF&#39;, &#39;2519.266667&#39;, ..., &#39;2515.350000&#39;, &#39;729.750000&#39;,
+        &#39;37&#39;],
+       [&#39;LICJ&#39;, &#39;LIRF&#39;, &#39;2515.350000&#39;, ..., &#39;2508.016667&#39;, &#39;734.333333&#39;,
+        &#39;38&#39;]], dtype=&#39;&lt;U12&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="segment-filtering">
+<h2>Segment Filtering<a class="headerlink" href="#segment-filtering" title="Permalink to this headline">#</a></h2>
+<p>Every route is divided into multiple segments <strong>numbered starting from 1</strong>. We actually care about the first and last one containing the coordinates of the starting and ending airports, so we need to filter out these segments. We get the segment number array with the last column which we cast to integers.</p>
+<p>We do so by first getting the segments array, and the difference array, calculated as <code class="docutils literal notranslate"><span class="pre">diff[i]</span> <span class="pre">=</span> <span class="pre">segments[i+1]</span> <span class="pre">-</span> <span class="pre">segments[i]</span></code>. In order to include also the last element we use the <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.roll.html"><code class="docutils literal notranslate"><span class="pre">numpy.roll</span></code></a> function with <em>shift -1</em>, which <strong>shifts all element</strong> 1 ahead with periodic boundary conditions (last element is placed first).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">segments</span> <span class="o">=</span> <span class="n">data</span><span class="p">[:,</span> <span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s2">&quot;int32&quot;</span><span class="p">)</span>
+<span class="n">diff</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">roll</span><span class="p">(</span><span class="n">segments</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">-</span> <span class="n">segments</span>
+<span class="n">segments</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([ 1,  1,  1, ..., 36, 37, 38])
+</pre></div>
+</div>
+</div>
+</div>
+<p>We first make masks by checking where <code class="docutils literal notranslate"><span class="pre">diff</span> <span class="pre">&lt;=</span> <span class="pre">0</span></code> to get the end points (the last segment is the highest number then we start with a new segment with number 1). The starting segments are found where <code class="docutils literal notranslate"><span class="pre">segments</span> <span class="pre">==</span> <span class="pre">1</span></code>.</p>
+<p>We use <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.flatnonzero.html"><code class="docutils literal notranslate"><span class="pre">numpy.flatnonzero</span></code></a> to find the indices where the array is <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p>
+<p>At the end we check if both arrays are equal in size.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">end</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">flatnonzero</span><span class="p">(</span><span class="n">diff</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">start</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">flatnonzero</span><span class="p">(</span><span class="n">segments</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">end</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">start</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>36798 36798
+</pre></div>
+</div>
+</div>
+</div>
+<p>Using these indices we now get the names and coordinates of the start and end points. We also convert the coordinates from <code class="docutils literal notranslate"><span class="pre">str</span></code> to <code class="docutils literal notranslate"><span class="pre">float</span></code> and divide by 60 because the coordinates were given in <strong>minutes</strong>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">start_name</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="n">start</span><span class="p">][:,</span> <span class="mi">0</span><span class="p">]</span>
+<span class="n">start_coords</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="n">start</span><span class="p">][:,</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s2">&quot;float32&quot;</span><span class="p">)</span> <span class="o">/</span> <span class="mi">60</span>
+
+<span class="n">end_name</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="n">end</span><span class="p">][:,</span> <span class="mi">1</span><span class="p">]</span>
+<span class="n">end_coords</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="n">end</span><span class="p">][:,</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">)]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s2">&quot;float32&quot;</span><span class="p">)</span> <span class="o">/</span> <span class="mi">60</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="json-coordinate-dictionary">
+<h2>JSON coordinate dictionary<a class="headerlink" href="#json-coordinate-dictionary" title="Permalink to this headline">#</a></h2>
+<p>Now to create our coordinates database we will make a dictionary from the name and coordinates. We create both the dictionaries using a simple dictionary comprehension (which is the same as a list comprehension).</p>
+<p>We can now merge the two dictionaries to get a single dictionary that associate the airport ICAO name to the coordinates (elements of the first array are overridden but it doesn’t matter).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">start_dic</span> <span class="o">=</span> <span class="p">{</span><span class="n">name</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;[</span><span class="si">{</span><span class="n">lat</span><span class="si">}</span><span class="s2">, </span><span class="si">{</span><span class="n">long</span><span class="si">}</span><span class="s2">]&quot;</span> <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="p">(</span><span class="n">lat</span><span class="p">,</span> <span class="n">long</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">start_name</span><span class="p">,</span> <span class="n">start_coords</span><span class="p">)}</span>
+<span class="n">end_dic</span> <span class="o">=</span> <span class="p">{</span><span class="n">name</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;[</span><span class="si">{</span><span class="n">lat</span><span class="si">}</span><span class="s2">, </span><span class="si">{</span><span class="n">long</span><span class="si">}</span><span class="s2">]&quot;</span> <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="p">(</span><span class="n">lat</span><span class="p">,</span> <span class="n">long</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">end_name</span><span class="p">,</span> <span class="n">end_coords</span><span class="p">)}</span>
+
+<span class="n">loc_dic</span> <span class="o">=</span> <span class="n">start_dic</span> <span class="o">|</span> <span class="n">end_dic</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>In order to use the json dump method we already have converted the data to strings by using the so called <strong>string representation</strong> of the list of the coordinates.</p>
+<p>We can now use the json module to dump everything to a file.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;../../data/airports_coords.json&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">fp</span><span class="p">:</span>
+    <span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">loc_dic</span><span class="p">,</span> <span class="n">fp</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>If we want to import the data one needs to load the file with the json module and then we can use the <code class="docutils literal notranslate"><span class="pre">json.loads</span></code> function to <strong>convert the string representation back to the original list</strong>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;../../data/airports_coords.json&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">fp</span><span class="p">:</span>   
+    <span class="n">my_dump</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">fp</span><span class="p">)</span>
+    <span class="n">airport</span> <span class="o">=</span> <span class="p">{</span><span class="n">key</span><span class="p">:</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">val</span><span class="p">)</span> <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">val</span> <span class="ow">in</span> <span class="n">my_dump</span><span class="o">.</span><span class="n">items</span><span class="p">()}</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="the-edge-list">
+<h2>The edge list<a class="headerlink" href="#the-edge-list" title="Permalink to this headline">#</a></h2>
+<p>We now want to get the edge list. We will then use various functions from the <a class="reference external" href="https://igraph.readthedocs.io/en/stable/">igraph module</a> to import and export the data into <code class="docutils literal notranslate"><span class="pre">igraph.Graph</span></code> objects.</p>
+<p>As we already said we only need one of the multiple segment present in the datasheet so we can just use the <strong>start</strong> mask to choose our segments.</p>
+<p>We can now use the <a class="reference external" href="https://igraph.readthedocs.io/en/stable/api/igraph.Graph.html#TupleList"><code class="docutils literal notranslate"><span class="pre">Graph.TupleList</span></code></a> method which will create a <a class="reference external" href="https://igraph.readthedocs.io/en/stable/api/igraph.Graph.html"><code class="docutils literal notranslate"><span class="pre">igraph.Graph</span></code></a> object for us.</p>
+<p>By default it will create an undirected multilink graph. The name of the nodes is added as a <code class="docutils literal notranslate"><span class="pre">igraph.Vertex</span></code> attribute with the name <strong>name</strong>. In order to access them one can use the <a class="reference external" href="https://igraph.readthedocs.io/en/stable/api/igraph.VertexSeq.html"><code class="docutils literal notranslate"><span class="pre">igraph.VertexSeq</span></code></a> object.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">named_edges</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="n">start</span><span class="p">][:,</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]]</span>
+<span class="n">airport_graph</span> <span class="o">=</span> <span class="n">ig</span><span class="o">.</span><span class="n">Graph</span><span class="o">.</span><span class="n">TupleList</span><span class="p">(</span><span class="n">named_edges</span><span class="p">,</span> <span class="n">directed</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>So now we will create 2 files containing the weighted undirected network (called <strong>weighted</strong>) and another one with a simplified network without weights, multilink or self-loops (called <strong>simple</strong>). One could also create the directed versions by calling <code class="docutils literal notranslate"><span class="pre">directed</span> <span class="pre">=</span> <span class="pre">True</span></code> in all the functions.</p>
+<p>In order to transform the multilink into weights and to remove self-loops one uses the <a class="reference external" href="https://igraph.readthedocs.io/en/stable/api/igraph.GraphBase.html#simplify"><code class="docutils literal notranslate"><span class="pre">Graph.simplify</span></code></a> function.</p>
+<p>We first create a copy of our graph (called <strong>temp_graph</strong>) with a new <code class="docutils literal notranslate"><span class="pre">Edge</span></code> attribute called <strong>weights</strong> initialized to 1 (there are multilinks). Then we use simplify to remove multilinks (but not self-loops) and combine the edge attributes by summing them up (counts the number of links).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">temp_graph</span> <span class="o">=</span> <span class="n">airport_graph</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">temp_graph</span><span class="o">.</span><span class="n">es</span><span class="p">[</span><span class="s2">&quot;weights&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">weighted</span> <span class="o">=</span> <span class="n">temp_graph</span><span class="o">.</span><span class="n">simplify</span><span class="p">(</span><span class="n">multiple</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">loops</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">combine_edges</span><span class="o">=</span><span class="s2">&quot;sum&quot;</span><span class="p">)</span>
+<span class="n">simple</span> <span class="o">=</span> <span class="n">airport_graph</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span><span class="o">.</span><span class="n">simplify</span><span class="p">(</span><span class="n">multiple</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">loops</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>For the export I liked the <code class="docutils literal notranslate"><span class="pre">.ncol</span></code> data format used by the <a class="reference external" href="https://github.com/TheOpteProject/LGL/">LGL (Large Graph Layout) project</a>. This is both simple and human readable.</p>
+<p>The format keeps the name of the vertices and permits both weighted and directed networks by using the <a class="reference external" href="https://igraph.readthedocs.io/en/stable/api/igraph.GraphBase.html#write_ncol"><code class="docutils literal notranslate"><span class="pre">Graph.write_ncol</span></code></a> for export and <a class="reference external" href="https://igraph.readthedocs.io/en/stable/api/igraph.GraphBase.html#Read_Ncol"><code class="docutils literal notranslate"><span class="pre">Graph.Read_Ncol</span></code></a> for import. By default it will use our <strong>name</strong> attribute and we specify our <strong>weights</strong> attribute.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">simple</span><span class="o">.</span><span class="n">write_ncol</span><span class="p">(</span><span class="s2">&quot;../../data/simple_airport.ncol&quot;</span><span class="p">,</span> <span class="n">weights</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+<span class="n">weighted</span><span class="o">.</span><span class="n">write_ncol</span><span class="p">(</span><span class="s2">&quot;../../data/weighted_airport.ncol&quot;</span><span class="p">,</span> <span class="n">weights</span><span class="o">=</span><span class="s2">&quot;weights&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>So one can now easily read the data and plot the graph for example (we will discuss visualization later…)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">g</span> <span class="o">=</span> <span class="n">ig</span><span class="o">.</span><span class="n">Graph</span><span class="o">.</span><span class="n">Read_Ncol</span><span class="p">(</span><span class="s2">&quot;../../data/simple_airport.ncol&quot;</span><span class="p">,</span> <span class="n">directed</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">ig</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">bbox</span><span class="o">=</span><span class="p">(</span><span class="mi">500</span><span class="p">,</span> <span class="mi">250</span><span class="p">),</span> <span class="n">layout</span><span class="o">=</span><span class="s2">&quot;graphopt&quot;</span><span class="p">,</span> <span class="n">vertex_size</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/35600a4741e74dbc3fb5f1dd482162722e2f564235d3cca4bf42db6bd06c873f.svg" src="../../_images/35600a4741e74dbc3fb5f1dd482162722e2f564235d3cca4bf42db6bd06c873f.svg" /></div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./contributions\tutorials"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../../source/test_notebook.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Test Notebook</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="airport_logo.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Complex Network Logo</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#first-imports">First Imports</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#segment-filtering">Segment Filtering</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#json-coordinate-dictionary">JSON coordinate dictionary</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-edge-list">The edge list</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Alessandro Romancino, Salvatore Micciché
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
