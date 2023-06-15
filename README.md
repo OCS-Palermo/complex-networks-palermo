@@ -50,7 +50,13 @@ Please make sure your code is well documented following a format similar to the 
 ## Roadmap
 
 - [x] Add tutorials for data import and the CN logo
-- [x] Complete overhaul using jupyter book
-- [ ] Cheatsheet of igraph commands
-- [ ] Add various model constructors
-- [ ] Translate the tutorial for installation and add here
+- [ ] igraph cheatsheet
+- [ ] Add various model constructores
+- [ ] Add conda guide and how to install python
+- [ ] Jupyter guide
+- [ ] Git guide
+
+
+
+
+
