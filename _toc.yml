@@ -1,6 +1,6 @@
 format: jb-book
 root: README
-parts:
+parts:  
   - caption: Complex Networks
     chapters:
     - file: source/test_notebook

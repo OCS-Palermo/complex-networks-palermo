@@ -317,15 +317,15 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-started">Getting Started</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dependencies">Dependencies</a></li>
-</ul>
-</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#acknowledgments">Acknowledgments</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bibliography">Bibliography</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contributing">Contributing</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#running-the-code">Running the Code</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dependencies">Dependencies</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contributing">Contributing</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#roadmap">Roadmap</a></li>
 </ul>
             </nav>
@@ -344,6 +344,7 @@ document.write(`
 <p>This repository is the official database for the <a class="reference external" href="https://www.unipa.it/persone/docenti/m/salvatore.micciche/?pagina=insegnamento&amp;idInsegnamento=155641&amp;idCattedra=149802"><em>Complex Networks (21958)</em></a> course by <a class="reference external" href="https://www.unipa.it/persone/docenti/m/salvatore.micciche/"><strong>Salvatore Miccichè</strong></a> in <a class="reference external" href="https://www.unipa.it/">Università degli Studi di Palermo</a>. This repository was made by <a class="reference external" href="https://github.com/alex180500"><strong>Alessandro Romancino</strong></a>.</p>
 <p>The code is uploaded in a book made with <a class="reference external" href="https://jupyterbook.org/en/stable/intro.html">Jupyter Book</a> which is available at the following website: <br />
 <a class="reference external" href="https://www.unipa.it/"><strong>SITO BELLO</strong></a></p>
+<p>The <strong>Complex Networks</strong> section will contain the bulk of the course code, with all most useful functions and explainations. The <strong>Tutorials</strong> section will instead focus on less general but still didactic examples. The <strong>Contributions</strong> section instead contains all the code produced by students.</p>
 <div class="toctree-wrapper compound">
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Complex Networks</span></p>
 <ul>
@@ -367,25 +368,10 @@ document.write(`
 </li>
 </ul>
 </div>
-<section id="getting-started">
-<h2>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this headline">#</a></h2>
-<p>A general tutorial on how to install Python is present (italian only for now) at: <br />
-<a class="github reference external" href="https://github.com/alex180500/aisf-corso-python">alex180500/aisf-corso-python</a></p>
-<section id="dependencies">
-<h3>Dependencies<a class="headerlink" href="#dependencies" title="Permalink to this headline">#</a></h3>
-<p>If you only want to run the notebooks you just need these packages (versions are the only one tested):</p>
-<ul class="simple">
-<li><p>numpy <strong>≥ 1.24</strong> <em>(for numerical calculations)</em></p></li>
-<li><p>python-igraph <strong>≥ 0.10</strong> <em>(for most of the graph functions)</em></p></li>
-<li><p>matplotlib <strong>≥ 3.6</strong> <em>(for general plotting)</em></p></li>
-<li><p>pycairo <strong>≥ 1.23</strong> <em>(for all the igraph plots)</em></p></li>
-</ul>
-</section>
-</section>
 <section id="acknowledgments">
 <h2>Acknowledgments<a class="headerlink" href="#acknowledgments" title="Permalink to this headline">#</a></h2>
 <p>Thanks for the contributions by <a class="reference external" href="https://github.com/Pherrara"><strong>Alessandro Ferrara</strong></a>. Thanks also to <strong>Mattia Romeo</strong> for the various code snippets.</p>
-<p>Also there are many useful general resources for Complex Networks: <br />
+<p>There are many useful general resources for Complex Networks: <br />
 <span id="id1">Newman [<a class="reference internal" href="#id5" title="M. Newman. Networks (2nd edition). Oxford University Press, 2018. doi:10.1093/oso/9780198805090.001.0001.">2018</a>], Latora <em>et al.</em> [<a class="reference internal" href="#id6" title="V. Latora, V. Nicosia, and G. Russo. Complex Networks: Principles, Methods and Applications. Cambridge University Press, 2017. doi:10.1017/9781316216002.">2017</a>]</span></p>
 <section id="bibliography">
 <h3>Bibliography<a class="headerlink" href="#bibliography" title="Permalink to this headline">#</a></h3>
@@ -401,8 +387,23 @@ document.write(`
 </div>
 </section>
 </section>
+<section id="running-the-code">
+<h2>Running the Code<a class="headerlink" href="#running-the-code" title="Permalink to this headline">#</a></h2>
+<p>If you want to run the notebooks locally and have an hands on approach go ahead and download all the contents directly from the main <a class="reference external" href="https://github.com/CNPalermo/complex-networks-palermo">GitHub Page over here</a>.</p>
+<p>A general tutorial on how to install Python is present (italian only for now) at: <br />
+<a class="github reference external" href="https://github.com/alex180500/aisf-corso-python">alex180500/aisf-corso-python</a></p>
+<section id="dependencies">
+<h3>Dependencies<a class="headerlink" href="#dependencies" title="Permalink to this headline">#</a></h3>
+<p>You just need these packages (versions are the only one tested):</p>
+<ul class="simple">
+<li><p>numpy <strong>≥ 1.24</strong> <em>(for numerical calculations)</em></p></li>
+<li><p>python-igraph <strong>≥ 0.10</strong> <em>(for most of the graph functions)</em></p></li>
+<li><p>matplotlib <strong>≥ 3.6</strong> <em>(for general plotting)</em></p></li>
+<li><p>pycairo <strong>≥ 1.23</strong> <em>(for all the igraph plots)</em></p></li>
+</ul>
+</section>
 <section id="contributing">
-<h2>Contributing<a class="headerlink" href="#contributing" title="Permalink to this headline">#</a></h2>
+<h3>Contributing<a class="headerlink" href="#contributing" title="Permalink to this headline">#</a></h3>
 <p>Please, if you make an exercise or some cool Complex Network code, you are <strong>encouraged</strong> to add it here. Also, feel free to open discussions on the Issue page and issuing your pull requests!</p>
 <p>Please make sure your code is well documented following a format similar to the notebooks present in this repository. In order to add your files just follow these steps:</p>
 <ul class="simple">
@@ -413,14 +414,16 @@ document.write(`
 <li><p>Open a pull request here</p></li>
 </ul>
 </section>
+</section>
 <section id="roadmap">
 <h2>Roadmap<a class="headerlink" href="#roadmap" title="Permalink to this headline">#</a></h2>
 <ul class="contains-task-list simple">
 <li class="task-list-item"><p><input class="task-list-item-checkbox" checked="checked" disabled="disabled" type="checkbox"> Add tutorials for data import and the CN logo</p></li>
-<li class="task-list-item"><p><input class="task-list-item-checkbox" checked="checked" disabled="disabled" type="checkbox"> Complete overhaul using jupyter book</p></li>
-<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Cheatsheet of igraph commands</p></li>
-<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Add various model constructors</p></li>
-<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Translate the tutorial for installation and add here</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> igraph cheatsheet</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Add various model constructores</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Add conda guide and how to install python</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Jupyter guide</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Git guide</p></li>
 </ul>
 </section>
 </section>
@@ -483,15 +486,15 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-started">Getting Started</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dependencies">Dependencies</a></li>
-</ul>
-</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#acknowledgments">Acknowledgments</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bibliography">Bibliography</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contributing">Contributing</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#running-the-code">Running the Code</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dependencies">Dependencies</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contributing">Contributing</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#roadmap">Roadmap</a></li>
 </ul>
   </nav></div>
