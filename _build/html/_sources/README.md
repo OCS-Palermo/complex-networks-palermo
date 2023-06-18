@@ -2,7 +2,7 @@
 
 # Complex Networks Palermo
 
-This repository is the official database for the [_Complex Networks (21958)_](https://www.unipa.it/persone/docenti/m/salvatore.micciche/?pagina=insegnamento&idInsegnamento=155641&idCattedra=149802) course by [**Salvatore Miccichè**](https://www.unipa.it/persone/docenti/m/salvatore.micciche/) in [Università degli Studi di Palermo](https://www.unipa.it/). This repository was made by [**Alessandro Romancino**](https://github.com/alex180500) and is distributed under the [MIT LICENSE](LICENSE).
+This repository is the official database for the [_Complex Networks (21958)_](https://www.unipa.it/persone/docenti/m/salvatore.micciche/?pagina=insegnamento&idInsegnamento=155641&idCattedra=149802) course by [**Salvatore Miccichè**](https://www.unipa.it/persone/docenti/m/salvatore.micciche/) in [Università degli Studi di Palermo](https://www.unipa.it/). This repository was made by [**Alessandro Romancino**](https://github.com/alex180500) and is distributed under the [MIT LICENSE](https://github.com/CNPalermo/complex-networks-palermo/blob/main/LICENSE).
 
 The code is uploaded in a book made with [Jupyter Book](https://jupyterbook.org/en/stable/intro.html) which is available at the following website: \
 [**https://cnpalermo.github.io/complex-networks-palermo/**](https://cnpalermo.github.io/complex-networks-palermo/)
