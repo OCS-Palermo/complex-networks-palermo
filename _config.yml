@@ -12,6 +12,7 @@ repository:
   branch: main
 
 launch_buttons:
+  notebook_interface: "classic"
   thebe: true
 
 only_build_toc_files: true
