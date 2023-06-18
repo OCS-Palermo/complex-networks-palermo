@@ -214,6 +214,37 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="article-header-buttons">
 
 
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li>
+<button onclick="initThebeSBT()"
+  class="btn btn-sm btn-launch-thebe dropdown-item"
+  title="Launch Thebe"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="btn__text-container">Live Code</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
 <a href="https://github.com/CNPalermo/complex-networks-palermo" target="_blank"
    class="btn btn-sm btn-source-repository-button"
    title="Source repository"
@@ -589,8 +620,8 @@ document.write(`
     {
         requestKernel: true,
         binderOptions: {
-            repo: "binder-examples/jupyter-stacks-datascience",
-            ref: "master",
+            repo: "CNPalermo/complex-networks-palermo",
+            ref: "main",
         },
         codeMirrorConfig: {
             theme: "abcdef",
