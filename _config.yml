@@ -11,9 +11,10 @@ repository:
   url: https://github.com/CNPalermo/complex-networks-palermo
   branch: main
 
-launch_buttons:
-  notebook_interface: "classic"
-  thebe: true
+# launch_buttons:
+#   notebook_interface: "classic"
+#   binderhub_url: "https://mybinder.org"
+#   thebe: true
 
 only_build_toc_files: true
 execute:
