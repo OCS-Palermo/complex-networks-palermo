@@ -9,6 +9,10 @@ html:
 
 repository:
   url: https://github.com/CNPalermo/complex-networks-palermo
+  branch: main
+
+launch_buttons:
+  thebe: true
 
 only_build_toc_files: true
 execute:
