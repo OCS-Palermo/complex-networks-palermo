@@ -1,11 +1,12 @@
 title: CN Palermo
 author: Alessandro Romancino, Salvatore Micciché
 copyright: "2023"
-logo: images/cnpa_banner.png
+logo: images/cnpa_banner_alt.png
 
 html:
   favicon: images/cnpa_logo.png
   use_repository_button: true
+  home_page_in_navbar: false
 
 repository:
   url: https://github.com/CNPalermo/complex-networks-palermo
